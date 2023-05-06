@@ -41,5 +41,26 @@ public class MagicTrick {
 
         System.out.println("I see the number in your mind...");
         System.out.println("The number that you have now is " + guessingNumber + ".");
+
+        //Test Code (Add /* */ when not using)
+        System.out.print("Enter the number guessed between 1 and 10: ");
+        int numberEntered = userInput.nextInt();
+        userInput.nextLine();
+
+        int currentNumber = numberEntered * 2;
+        System.out.print("Current Number x 2 = " + currentNumber);
+        userInput.nextLine();
+
+        currentNumber = currentNumber + addingNumber;
+        System.out.print("Current number + " + addingNumber + " = " + currentNumber);
+        userInput.nextLine();
+
+        currentNumber = currentNumber / 2;
+        System.out.print("Current number / 2 = " + currentNumber);
+        userInput.nextLine();
+
+        currentNumber = currentNumber - numberEntered;
+        System.out.print("Current number - " + numberEntered + " = " + currentNumber);
     }
 }
+
