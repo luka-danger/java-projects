@@ -1,4 +1,5 @@
 //Import Java utilities
+import java.util.Objects;
 import java.util.Scanner;
 
 //Testing different aspects of Java
@@ -37,5 +38,16 @@ public class Main {
         lineNumber++;
         String secondString = lineNumber + ". Second Place.";
         System.out.println(firstString + secondString);
+
+        //Test If and Else Statement
+        Scanner next = new Scanner(System.in);
+        String postCard = ("Greetings from Hawaii");
+        System.out.println("Would you like a post card? (Y) or (N): ");
+        String answer = next.nextLine();
+        if (Objects.equals(answer, "Y")) {
+        System.out.println(postCard);
+        } else if (Objects.equals(answer, "N")) {
+        System.out.println("How boring.");
+        }
     }
 }
