@@ -48,6 +48,21 @@ public class Main {
         System.out.println(postCard);
         } else if (Objects.equals(answer, "N")) {
         System.out.println("How boring.");
+        } else {
+        System.out.println("You're not good at following directions, are you?");
+        }
+
+        //Test Logical and Boolean Operators
+        System.out.println("Enter a number: ");
+        int num1 = hello.nextInt();
+        int num2 = 2;
+        int num3 = num1 * num2;
+        if(num1 == num2){
+            System.out.println("The square root of " + num3 + " is " + num1);
+        } else if(num2 == num3 || num3 < num2){
+            System.out.println(num1 + "is <= to 1");
+        } else{
+            System.out.println(num3);
         }
     }
 }
