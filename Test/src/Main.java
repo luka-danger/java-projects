@@ -64,5 +64,16 @@ public class Main {
         } else{
             System.out.println(num3);
         }
+
+        //Test try and catch block
+        //Add a while loop to make code run until an integer is entered
+        System.out.print("Please enter your age in years: ");
+        int age = 0;
+            try {
+                age = hello.nextInt();
+            } catch (Exception ex) {
+                System.out.println("That's not a number.");
+                System.out.println("Please run again & enter a valid age.");
+            }
     }
 }
