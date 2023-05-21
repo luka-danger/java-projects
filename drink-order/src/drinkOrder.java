@@ -1,25 +1,4 @@
-/* Drink Menu Program (Menu in Polish)
-
-Napoje:
-Woda
-    Gazowana
-    Niegazowana
-
-Kawa
-    Czarna kawa (bez mleka)
-    Z mlekiem owsianym
-
-Herbata
-    Zielona
-        Z cytryną
-        Bez cytryny
-    Malinowa
-
-Piwo
-    Zywiec
-    Okocim
-    Tyskie
- */
+//Drink Menu Program (Menu in Polish)
 
 import java.util.Scanner;
 
@@ -30,6 +9,7 @@ public class drinkOrder {
         System.out.println("1) Woda 2) Kawa 3) Herbata 4) Piwo");
         System.out.println("Wybierz numer: ");
         int drinkResponse = input.nextInt();
+        //Assign default option for drinkDetails
         String drinkDetails = "Nie zamówiłeś napoju";
         //Provide options depending on the drink selection
         if(drinkResponse == 1) {
@@ -43,8 +23,9 @@ public class drinkOrder {
                 drinkDetails += " Niegazowana";
                 System.out.println(drinkDetails);
             }
+            //Any selection besides 1 or 2 selects Niegazowana (Regular water)
             else {
-                drinkDetails += " Gazowana";
+                drinkDetails += " Niegazowana";
                 System.out.println(drinkDetails);
             }
         }
@@ -60,6 +41,7 @@ public class drinkOrder {
                 drinkDetails += " z mlekiem owsianym";
                 System.out.println(drinkDetails);
             }
+            //Any selection besides 1 or 2 selects Czarna (Black coffee)
             else {
                 drinkDetails += " ,Czarna (bez mleka)";
                 System.out.println(drinkDetails);
@@ -85,6 +67,7 @@ public class drinkOrder {
                 drinkDetails += " malinowa";
                 System.out.println(drinkDetails);
             }
+            //Any selection besides 1 or 2 selects Zielona Herbata
             else {
                 drinkDetails += "Zielona Herbata";
                 System.out.println(drinkDetails);
@@ -96,21 +79,24 @@ public class drinkOrder {
             drinkResponse = input.nextInt();
             if(drinkResponse == 1) {
                 drinkDetails += ", Zywiec";
-                System.out.println(drinkDetails);
+                System.out.println(drinkDetails + ". Na Zdrowie");
             }
             else if(drinkResponse == 2) {
                 drinkDetails += ", Tyskie";
-                System.out.println(drinkDetails);
+                System.out.println(drinkDetails + ". Na Zdrowie");
             }
             else if(drinkResponse == 3) {
                 drinkDetails += ", Okocim";
-                System.out.println(drinkDetails);
+                System.out.println(drinkDetails + ". Na Zdrowie");
             }
+            //Any selection besides 1, 2, or 3 selects Piwo Sezonowe
             else {
                 drinkDetails += " Sezonowe";
-                System.out.println(drinkDetails);
+                System.out.println(drinkDetails + ". Na Zdrowie");
             }
         }
+        /*Any selection besides 1, 2, 3, or 4 leaves drinkDetails as
+        "Nie zamówiłeś napoju" (You didn't order a drink") */
         else {
             System.out.println(drinkDetails);
         }
