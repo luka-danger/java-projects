@@ -35,7 +35,6 @@ public class drinkOrder {
         if(drinkResponse == 1) {
             drinkDetails = "Woda";
             System.out.println("Czy wolisz: 1) Gazowana 2) Niegazowana");
-            input.nextInt();
             drinkResponse = input.nextInt();
             if(drinkResponse == 1) {
                 drinkDetails += " Gazowana";
@@ -45,7 +44,7 @@ public class drinkOrder {
                 drinkDetails += " Niegazowana";
                 System.out.println(drinkDetails);
             }
-;       }
+       }
         else {
             System.out.println(drinkDetails);
         }
