@@ -61,6 +61,31 @@ public class drinkOrder {
                 System.out.println(drinkDetails);
             }
         }
+        else if(drinkResponse == 3) {
+            drinkDetails = "Herbata";
+            System.out.println("Czy wolisz: 1) Zielona 2) Malinowa");
+            drinkResponse = input.nextInt();
+            if(drinkResponse == 1) {
+                System.out.println("1) Z cytryną 2) Bez cytryny");
+                drinkResponse = input.nextInt();
+                if(drinkResponse == 1) {
+                    drinkDetails += " z cytryną";
+                    System.out.println(drinkDetails);
+                }
+                else if(drinkResponse == 2) {
+                    drinkDetails += " bez cytryny";
+                    System.out.println(drinkDetails);
+                }
+            }
+            else if(drinkResponse == 2) {
+                drinkDetails += " malinowa";
+                System.out.println(drinkDetails);
+            }
+            else {
+                drinkDetails += "Zielona Herbata";
+                System.out.println(drinkDetails);
+            }
+        }
         else {
             System.out.println(drinkDetails);
         }
