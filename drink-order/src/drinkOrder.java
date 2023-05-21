@@ -36,15 +36,31 @@ public class drinkOrder {
             drinkDetails = "Woda";
             System.out.println("Czy wolisz: 1) Gazowana 2) Niegazowana");
             drinkResponse = input.nextInt();
-            if(drinkResponse == 1) {
+            if (drinkResponse == 1) {
                 drinkDetails += " Gazowana";
                 System.out.println(drinkDetails);
-            }
-            else if(drinkResponse == 2) {
+            } else if (drinkResponse == 2) {
                 drinkDetails += " Niegazowana";
                 System.out.println(drinkDetails);
             }
-       }
+        }
+        else if(drinkResponse == 2) {
+            drinkDetails = "Kawa";
+            System.out.println("Czy wolisz: 1) Czarna (bez mleka) 2) Z mlekiem owsianym");
+            drinkResponse = input.nextInt();
+            if(drinkResponse == 1) {
+                drinkDetails += ", Czarna (bez mleka)";
+                System.out.println(drinkDetails);
+            }
+            else if(drinkResponse == 2) {
+                drinkDetails += " z mlekiem owsianym";
+                System.out.println(drinkDetails);
+            }
+            else {
+                drinkDetails += " ,Czarna (bez mleka)";
+                System.out.println(drinkDetails);
+            }
+        }
         else {
             System.out.println(drinkDetails);
         }
