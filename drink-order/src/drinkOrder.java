@@ -43,6 +43,10 @@ public class drinkOrder {
                 drinkDetails += " Niegazowana";
                 System.out.println(drinkDetails);
             }
+            else {
+                drinkDetails += " Gazowana";
+                System.out.println(drinkDetails);
+            }
         }
         else if(drinkResponse == 2) {
             drinkDetails = "Kawa";
@@ -83,6 +87,27 @@ public class drinkOrder {
             }
             else {
                 drinkDetails += "Zielona Herbata";
+                System.out.println(drinkDetails);
+            }
+        }
+        else if(drinkResponse == 4) {
+            drinkDetails = "Piwo";
+            System.out.println("Ktore piwo: 1) Zywiec 2) Tyskie 3) Okocim");
+            drinkResponse = input.nextInt();
+            if(drinkResponse == 1) {
+                drinkDetails += ", Zywiec";
+                System.out.println(drinkDetails);
+            }
+            else if(drinkResponse == 2) {
+                drinkDetails += ", Tyskie";
+                System.out.println(drinkDetails);
+            }
+            else if(drinkResponse == 3) {
+                drinkDetails += ", Okocim";
+                System.out.println(drinkDetails);
+            }
+            else {
+                drinkDetails += " Sezonowe";
                 System.out.println(drinkDetails);
             }
         }
