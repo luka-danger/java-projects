@@ -34,8 +34,18 @@ public class drinkOrder {
         //Provide options depending on the drink selection
         if(drinkResponse == 1) {
             drinkDetails = "Woda";
-            System.out.println(drinkDetails);
+            System.out.println("Czy wolisz: 1) Gazowana 2) Niegazowana");
+            input.nextInt();
+            drinkResponse = input.nextInt();
+            if(drinkResponse == 1) {
+                drinkDetails += " Gazowana";
+                System.out.println(drinkDetails);
             }
+            else if(drinkResponse == 2) {
+                drinkDetails += " Niegazowana";
+                System.out.println(drinkDetails);
+            }
+;       }
         else {
             System.out.println(drinkDetails);
         }
