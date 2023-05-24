@@ -87,5 +87,29 @@ public class Main {
         randomNumbers[1] = 37;
         randomNumbers[2] = 138;
         System.out.println(randomNumbers);
+
+        //More Arrays Test
+        int [] someNumbers = {7, 12};
+        System.out.println(someNumbers[0] + someNumbers[1]);
+        someNumbers[1] = 6;
+        System.out.println(someNumbers[0] + someNumbers[1]);
+
+        //Test Index in Array with a catch block
+        String[] showList = {"Breaking Bad", "The Office", "Peaky Blinders"};
+        System.out.println("Select a pet: ");
+        System.out.println("1. " + showList[0]);
+        System.out.println("2. " + showList[1]);
+        System.out.println("3. " + showList[2]);
+        System.out.print("Enter selection #: ");
+        int choice = hello.nextInt();
+        //Subtract 1 from choice
+        choice--;
+        try {
+            System.out.println("You are watching " + showList[choice]);
+        }
+        //Prevents code from breaking
+        catch(ArrayIndexOutOfBoundsException ex) {
+            System.out.println("Not a valid selection.");
+        }
     }
 }
