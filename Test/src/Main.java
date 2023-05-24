@@ -75,9 +75,17 @@ public class Main {
                 System.out.println("That's not a number.");
                 System.out.println("Please run again & enter a valid age.");
             }
+            System.out.println("Go away warning " + age);
 
         //Test single-dimensional arrays
         int [] nbaScores = {126, 117, 112, 103, 97};
         String[] nbaTeams = {"Nuggets", "Thunder", "Bucks", "Lakers", "Hawks"};
+        System.out.println(nbaTeams[0]);
+        System.out.println(nbaScores);
+        int [] randomNumbers = new int [3];
+        randomNumbers[0] = 22;
+        randomNumbers[1] = 37;
+        randomNumbers[2] = 138;
+        System.out.println(randomNumbers);
     }
 }
