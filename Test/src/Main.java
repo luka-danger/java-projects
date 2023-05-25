@@ -48,7 +48,9 @@ public class Main {
         System.out.println(postCard);
         } else if (Objects.equals(answer, "N")) {
         System.out.println("How boring.");
-        } else {
+        }
+        //If user enters something other than Y or N
+        else {
         System.out.println("You're not good at following directions, are you?");
         }
 
@@ -80,13 +82,12 @@ public class Main {
         //Test single-dimensional arrays
         int [] nbaScores = {126, 117, 112, 103, 97};
         String[] nbaTeams = {"Nuggets", "Thunder", "Bucks", "Lakers", "Hawks"};
-        System.out.println(nbaTeams[0]);
-        System.out.println(nbaScores);
+        System.out.println("The " + nbaTeams[0] + " scored " + nbaScores[0] + " points.");
         int [] randomNumbers = new int [3];
         randomNumbers[0] = 22;
         randomNumbers[1] = 37;
         randomNumbers[2] = 138;
-        System.out.println(randomNumbers);
+        System.out.println(randomNumbers[2]);
 
         //More Arrays Test
         int [] someNumbers = {7, 12};
@@ -105,7 +106,8 @@ public class Main {
         try {
             choice = hello.nextInt();
         }
-        catch(Exception ex) { // If user doesn't enter a number
+        // If user doesn't enter a number
+        catch(Exception ex) {
             System.out.println("That's not a number.");
         }
         //Subtract 1 from choice
@@ -119,6 +121,10 @@ public class Main {
             System.out.println("Not a valid selection.");
         }
 
-
+        //Modify Arrays
+        String[] fruits = {"apple", "orange", "banana"};
+        System.out.println("Original List: " + fruits[0] + " "+ fruits[1] + " " + fruits[2]);
+        fruits[0] = "kiwi";
+        System.out.println("Modified List: " + fruits[0] + " "+ fruits[1] + " " + fruits[2]);
     }
 }
