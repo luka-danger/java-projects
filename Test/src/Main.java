@@ -1,6 +1,7 @@
 //Import Java utilities
 import java.util.Objects;
 import java.util.Scanner;
+import java.util.Arrays;
 
 //Testing different aspects of Java
 //Using this as my test program for CS1101:'Intro to Java'
@@ -70,14 +71,13 @@ public class Main {
         //Test try and catch block
         //Add a while loop to make code run until an integer is entered
         System.out.println("Please enter your age in years: ");
-        int age = 0;
             try {
-                age = hello.nextInt();
+                int age = hello.nextInt();
+                System.out.println("Your are " + age + " years old.");
             } catch (Exception ex) {
                 System.out.println("That's not a number.");
                 System.out.println("Please run again & enter a valid age.");
             }
-            System.out.println("Go away warning " + age);
 
         //Test single-dimensional arrays
         int [] nbaScores = {126, 117, 112, 103, 97};
@@ -88,6 +88,8 @@ public class Main {
         randomNumbers[1] = 37;
         randomNumbers[2] = 138;
         System.out.println(randomNumbers[2]);
+        Arrays.sort(nbaScores);
+        System.out.println(Arrays.toString(nbaScores));
 
         //More Arrays Test
         int [] someNumbers = {7, 12};
@@ -97,7 +99,7 @@ public class Main {
 
         //Test Index in Array with a catch block
         String[] showList = {"Breaking Bad", "The Office", "Peaky Blinders"};
-        System.out.println("Select a pet: ");
+        System.out.println("Choose a show to watch: ");
         System.out.println("1. " + showList[0]);
         System.out.println("2. " + showList[1]);
         System.out.println("3. " + showList[2]);
@@ -121,10 +123,18 @@ public class Main {
             System.out.println("Not a valid selection.");
         }
 
-        //Modify Arrays
+        //Modify Single Index in Array
         String[] fruits = {"apple", "orange", "banana"};
         System.out.println("Original List: " + fruits[0] + " "+ fruits[1] + " " + fruits[2]);
         fruits[0] = "kiwi";
         System.out.println("Modified List: " + fruits[0] + " "+ fruits[1] + " " + fruits[2]);
+
+        //Modify Whole Array
+        String[] veggies = {"carrot", "broccoli", "celery"};
+        System.out.println("Original List: " + veggies[0] + " "+ veggies[1] + " " + veggies[2]);
+        veggies = new String[]{"pepper", "squash", "spinach"};
+        System.out.println("New List: " + veggies[0] + " "+ veggies[1] + " " + veggies[2]);
+
+        
     }
 }
