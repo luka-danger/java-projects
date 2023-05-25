@@ -17,8 +17,8 @@ public class Main {
         //Search for a number in the array
         System.out.println("Enter a value: ");
         int searchResults = input.nextInt();
-        if (searchResults > -1) {
-            int searchLocation = Arrays.binarySearch(scores, searchResults);
+        int searchLocation = Arrays.binarySearch(scores, searchResults);
+        if (searchLocation > -1) {
             System.out.println("Number " + searchResults + " was found at index " + searchLocation + ".");
         }
         else {
