@@ -14,15 +14,23 @@ public class Main {
         int highScore = scores[scores.length - 1];
         System.out.println("High Score: " + highScore);
         System.out.println("Low Score: " + lowScore);
+
         //Search for a number in the array
         System.out.println("Enter a value: ");
         int searchResults = input.nextInt();
         int searchLocation = Arrays.binarySearch(scores, searchResults);
         if (searchLocation > -1) {
             System.out.println("Number " + searchResults + " was found at index " + searchLocation + ".");
-        }
-        else {
+        } else {
             System.out.println("Number  " + searchResults + " was not found.");
         }
-        }
+        //Find top two scores with copyOfRange function
+        int[] topTwoScores = Arrays.copyOfRange(scores, scores.length - 2, scores.length);
+        System.out.println(Arrays.toString(topTwoScores));
+        //Find bottom two scores
+        int [] bottomTwoScores = Arrays.copyOfRange(scores, 0, scores.length - 3);
+        System.out.println(Arrays.toString(bottomTwoScores));
+
+
+    }
 }
