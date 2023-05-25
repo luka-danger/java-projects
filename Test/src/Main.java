@@ -25,7 +25,7 @@ public class Main {
         System.out.println("Hello " + name + "! " + chilling.replace("I AM" , "YOU ARE"));
 
         //Test more next methods
-        System.out.print("Enter 2 or more words separated by spaces: ");
+        System.out.println("Enter 2 or more words separated by spaces: ");
         String inputRead = hello.next();
         System.out.println("Input read by next(): " + inputRead);
         String stringInput = hello.next();
@@ -67,7 +67,7 @@ public class Main {
 
         //Test try and catch block
         //Add a while loop to make code run until an integer is entered
-        System.out.print("Please enter your age in years: ");
+        System.out.println("Please enter your age in years: ");
         int age = 0;
             try {
                 age = hello.nextInt();
@@ -100,16 +100,25 @@ public class Main {
         System.out.println("1. " + showList[0]);
         System.out.println("2. " + showList[1]);
         System.out.println("3. " + showList[2]);
-        System.out.print("Enter selection #: ");
-        int choice = hello.nextInt();
+        System.out.println("Enter selection #: ");
+        int choice = 0;
+        try {
+            choice = hello.nextInt();
+        }
+        catch(Exception ex) { // If user doesn't enter a number
+            System.out.println("That's not a number.");
+        }
         //Subtract 1 from choice
         choice--;
         try {
             System.out.println("You are watching " + showList[choice]);
         }
         //Prevents code from breaking
+        //Add a while loop to make code run until the right selection is entered
         catch(ArrayIndexOutOfBoundsException ex) {
             System.out.println("Not a valid selection.");
         }
+
+
     }
 }
