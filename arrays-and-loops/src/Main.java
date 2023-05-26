@@ -92,8 +92,24 @@ public class Main {
         while (exit > 0) {
             System.out.println("Enter the code to Exit the maze: ");
             exit = userInput.nextInt();
-        }
-        System.out.println("You escaped the infinite loop!");
+            }
 
+        //For Loop - FizzBuzz
+        System.out.println("Which number do you want to FizzBuzz to?: ");
+        int fizzBuzz = userInput.nextInt();
+        for(int i = 1; i <= fizzBuzz; i++) {
+            if(i%3==0 && i%5==0){
+                System.out.println("FizzBuzz");
+            }
+            else if(i%3==0){
+                System.out.println("Fizz");
+            }
+            else if(i%5==0){
+                System.out.println("Buzz");
+            }
+            else {
+                System.out.println(i);
+            }
+        }
     }
 }
