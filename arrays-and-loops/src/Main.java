@@ -63,14 +63,19 @@ public class Main {
         }
 
         //Create Hashmap
-        HashMap<String, Integer> nuggetsRoster = new HashMap<>();
-            nuggetsRoster.put("Nikola Jokic", 15);
-            nuggetsRoster.put("Jamal Murray", 27);
-            nuggetsRoster.put("Michael Porter Jr", 1);
-            nuggetsRoster.put("Aaron Gordon", 50);
-            nuggetsRoster.put("Kentavious Caldwell-Pope", 5);
+        HashMap<Integer, String> nuggetsRoster = new HashMap<>();
+        Scanner hello = new Scanner(System.in);
+        //Add key value pair to Hashmap
+        nuggetsRoster.put(15, "Nikola Jokic");
+        nuggetsRoster.put(27, "Jamal Murray");
+        nuggetsRoster.put(1, "Michael Porter Jr");
+        nuggetsRoster.put(50, "Aaron Gordon");
+        nuggetsRoster.put(5, "Kentavious Caldwell-Pope");
+        //Search for player by jersey number
         System.out.println("Which player number would you like to search for?: ");
-        int jerseyNumber = input.nextInt();
-
+        int jerseyNumber = hello.nextInt();
+        //Search for player by ID (Jersey number)
+        String player = nuggetsRoster.get(jerseyNumber);
+        System.out.println("Number " + jerseyNumber + " on the Denver Nuggets is " + player);
     }
 }
