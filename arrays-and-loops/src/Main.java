@@ -45,6 +45,7 @@ public class Main {
         System.out.println("Highest Grade: " + grades.get(listSize - 1));
 
         //Create a Hashset
+        String secretPassword = "Bananas";
         Scanner response = new Scanner(System.in);
         HashSet<String> closet = new HashSet<>();
         closet.add("Shoes");
@@ -57,8 +58,11 @@ public class Main {
         if(closet.contains(searchCloset)) {
             System.out.println("The closet contains " + searchCloset);
         }
-        else if(searchCloset.contains("Secret Password")) {
-            System.out.println("Hello");
+        else if(searchCloset.contains(secretPassword)) {
+            System.out.println("Password Correct! What would you like to add?: ");
+            String addItem = response.nextLine();
+            closet.add(addItem);
+            System.out.println(closet);
         }
         else {
             System.out.println("The closet does not contain " + searchCloset);
