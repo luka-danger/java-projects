@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 public class Closet {
     public static void main(String[] args) {
+        String secretPassword = "Bananas";
         Scanner response = new Scanner(System.in);
         HashSet<String> closet = new HashSet<>();
         closet.add("Shoes");
@@ -14,6 +15,12 @@ public class Closet {
         String searchCloset = response.nextLine();
         if(closet.contains(searchCloset)) {
             System.out.println("The closet contains " + searchCloset);
+        }
+        else if(searchCloset.contains(secretPassword)) {
+            System.out.println("Password Correct! What would you like to add?: ");
+            String addItem = response.nextLine();
+            closet.add(addItem);
+            System.out.println("You have added a " + addItem + " to the closet.");
         }
         else {
             System.out.println("The closet does not contain " + searchCloset);
