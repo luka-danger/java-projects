@@ -118,12 +118,13 @@ public class Main {
         do {
             System.out.println("Pick a number: ");
             choose = moreInput.nextInt();
-            if(choose%2 == 1) {
-                System.out.println("You chose incorrectly! Now you're stuck in a loop!");
+            if(choose % 2 == 1) {
+                System.out.println("You chose incorrectly! You are stuck in a loop.");
+            }
+            else if(choose % 2 == 0) {
+                System.out.println("You chose correct!");
             }
         }
-        while (choose%2 == 1);
-
-        System.out.println("You escaped the loop!");
+        while (choose % 2 == 1);
     }
 }
