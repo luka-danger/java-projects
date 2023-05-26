@@ -84,5 +84,16 @@ public class Main {
         testScores[1] = new int[] {82, 85, 83, 81, 87};
         testScores[2] = new int[] {80, 79, 75, 73, 72};
         System.out.println("The lowest score in the class is a " + testScores[2][4]);
+
+        //While Loop
+        Scanner userInput = new Scanner(System.in);
+        System.out.println("You are trapped in an infinite loop. There is no escape");
+        int exit = 1;
+        while (exit > 0) {
+            System.out.println("Enter the code to Exit the maze: ");
+            exit = userInput.nextInt();
+        }
+        System.out.println("You escaped the infinite loop!");
+
     }
 }
