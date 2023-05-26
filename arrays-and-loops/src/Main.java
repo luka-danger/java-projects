@@ -77,5 +77,12 @@ public class Main {
         //Search for player by ID (Jersey number)
         String player = nuggetsRoster.get(jerseyNumber);
         System.out.println("Number " + jerseyNumber + " on the Denver Nuggets is " + player);
+
+        //Two-Dimensional Array
+        int[][] testScores = new int[3][5];
+        testScores[0] = new int[] {100, 92, 89, 94, 91};
+        testScores[1] = new int[] {82, 85, 83, 81, 87};
+        testScores[2] = new int[] {80, 79, 75, 73, 72};
+        System.out.println("The lowest score in the class is a " + testScores[2][4]);
     }
 }
