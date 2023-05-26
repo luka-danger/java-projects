@@ -1,6 +1,4 @@
-import java.util.Arrays;
-import java.util.Scanner;
-import java.util.Random;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -31,6 +29,15 @@ public class Main {
         int [] bottomTwoScores = Arrays.copyOfRange(scores, 0, scores.length - 3);
         System.out.println(Arrays.toString(bottomTwoScores));
 
-
+        //Array List and add items to collection
+        ArrayList<Integer> grades = new ArrayList<>();
+        grades.add(93);
+        grades.add(85);
+        grades.add(99);
+        grades.add(87);
+        Collections.sort(grades);
+        int listSize = grades.size();
+        System.out.println("Lowest Grade: " + grades.get(0));
+        System.out.println("Highest Grade: " + grades.get(listSize - 1));
     }
 }
