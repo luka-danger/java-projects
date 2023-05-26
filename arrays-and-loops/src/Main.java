@@ -53,12 +53,15 @@ public class Main {
         closet.add("Hoodies");
         //Search for items in the closet
         System.out.println("What would you like to look for in the closet?: ");
-        String closetSearch = response.nextLine();
-        if(closet.contains(closetSearch)) {
-            System.out.println("The closet contains " + closetSearch);
+        String searchCloset = response.nextLine();
+        if(closet.contains(searchCloset)) {
+            System.out.println("The closet contains " + searchCloset);
+        }
+        else if(searchCloset.contains("Secret Password")) {
+            System.out.println("Hello");
         }
         else {
-            System.out.println("The closet does not contain " + closetSearch);
+            System.out.println("The closet does not contain " + searchCloset);
         }
 
     }
