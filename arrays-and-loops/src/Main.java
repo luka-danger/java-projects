@@ -111,5 +111,14 @@ public class Main {
                 System.out.println(i);
             }
         }
+
+        //While Loop with Text
+        Scanner moreInput = new Scanner(System.in);
+        String escapeKey = "";
+        while(!escapeKey.equalsIgnoreCase("go away")) {
+            System.out.println("You're stuck in a loop! Say something: ");
+            escapeKey = moreInput.nextLine();
+        }
+        System.out.println("You escaped the loop!");
     }
 }
