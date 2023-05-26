@@ -1,4 +1,8 @@
-import java.util.*;
+import java.util.Scanner;
+import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashSet;
 
 public class Main {
     public static void main(String[] args) {
@@ -39,5 +43,23 @@ public class Main {
         int listSize = grades.size();
         System.out.println("Lowest Grade: " + grades.get(0));
         System.out.println("Highest Grade: " + grades.get(listSize - 1));
+
+        //Create a Hashset
+        Scanner response = new Scanner(System.in);
+        HashSet<String> closet = new HashSet<>();
+        closet.add("Shoes");
+        closet.add("Jeans");
+        closet.add("Shirts");
+        closet.add("Hoodies");
+        //Search for items in the closet
+        System.out.println("What would you like to look for in the closet?: ");
+        String closetSearch = response.nextLine();
+        if(closet.contains(closetSearch)) {
+            System.out.println("The closet contains " + closetSearch);
+        }
+        else {
+            System.out.println("The closet does not contain " + closetSearch);
+        }
+
     }
 }
