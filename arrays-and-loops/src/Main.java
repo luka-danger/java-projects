@@ -3,6 +3,7 @@ import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
+import java.util.HashMap;
 
 public class Main {
     public static void main(String[] args) {
@@ -44,8 +45,7 @@ public class Main {
         System.out.println("Lowest Grade: " + grades.get(0));
         System.out.println("Highest Grade: " + grades.get(listSize - 1));
 
-        //Create a Hashset
-        String secretPassword = "Bananas";
+        //Create Hashset
         Scanner response = new Scanner(System.in);
         HashSet<String> closet = new HashSet<>();
         closet.add("Shoes");
@@ -58,15 +58,19 @@ public class Main {
         if(closet.contains(searchCloset)) {
             System.out.println("The closet contains " + searchCloset);
         }
-        else if(searchCloset.contains(secretPassword)) {
-            System.out.println("Password Correct! What would you like to add?: ");
-            String addItem = response.nextLine();
-            closet.add(addItem);
-            System.out.println(closet);
-        }
         else {
             System.out.println("The closet does not contain " + searchCloset);
         }
+
+        //Create Hashmap
+        HashMap<String, Integer> nuggetsRoster = new HashMap<>();
+            nuggetsRoster.put("Nikola Jokic", 15);
+            nuggetsRoster.put("Jamal Murray", 27);
+            nuggetsRoster.put("Michael Porter Jr", 1);
+            nuggetsRoster.put("Aaron Gordon", 50);
+            nuggetsRoster.put("Kentavious Caldwell-Pope", 5);
+        System.out.println("Which player number would you like to search for?: ");
+        int jerseyNumber = input.nextInt();
 
     }
 }
