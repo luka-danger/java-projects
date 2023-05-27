@@ -7,7 +7,7 @@ import java.util.HashMap;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+        /*Scanner input = new Scanner(System.in);
         int[] scores = {187, 42, 17, 100, 19};
         //Organize arrays from lowest to highest
         Arrays.sort(scores);
@@ -141,6 +141,21 @@ public class Main {
                 break;
             }
         }
-        System.out.println("You escaped the loop!");
+        System.out.println("You escaped the loop!");*/
+
+        //Count even numbers in an array with an enhanced for loop
+        int [] coolArray = {1, 17, 42, 5, 74, 32, 101};
+        //Set initial count of even numbers to 0
+        int evenNumbers = 0;
+        //Loop through numbers in the array with enhance
+        for (int i : coolArray) {
+            //Increase count of even number variable if any number
+            //In array divided by 2 has no remainder (is an even number)
+            if (i % 2 == 0) {
+                evenNumbers++;
+            }
+        }
+        System.out.print("The array, " + Arrays.toString(coolArray));
+        System.out.println(", contains " + evenNumbers + " even numbers.");
     }
 }
