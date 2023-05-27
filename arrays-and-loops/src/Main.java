@@ -89,10 +89,14 @@ public class Main {
         Scanner userInput = new Scanner(System.in);
         System.out.println("You are trapped in an infinite loop. There is no escape");
         int exit = 1;
-        while (exit > 0) {
-            System.out.println("Enter the code to Exit the maze: ");
-            exit = userInput.nextInt();
+        while(exit > 0) {
+            System.out.println("Enter the password to Exit the maze: ");
+            String password = userInput.nextLine();
+            if(password.equalsIgnoreCase("password")) {
+                exit -- ;
             }
+        }
+        System.out.println("Well that's a terrible password.");
 
         //For Loop - FizzBuzz
         System.out.println("Which number do you want to FizzBuzz to?: ");
@@ -133,6 +137,9 @@ public class Main {
         while(!escapeKey.equalsIgnoreCase("go away")) {
             System.out.println("Oh no! You're stuck in another loop! Say something: ");
             escapeKey = unicorn.nextLine();
+            if(escapeKey.equalsIgnoreCase("stop")) {
+                break;
+            }
         }
         System.out.println("You escaped the loop!");
     }
