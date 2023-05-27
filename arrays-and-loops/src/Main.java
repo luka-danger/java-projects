@@ -137,7 +137,7 @@ public class Main {
         while(!escapeKey.equalsIgnoreCase("go away")) {
             System.out.println("Oh no! You're stuck in another loop! Say something: ");
             escapeKey = unicorn.nextLine();
-            if(escapeKey.equalsIgnoreCase("stop")) {
+            if(escapeKey.equalsIgnoreCase("stop") || escapeKey.equalsIgnoreCase("quit")) {
                 break;
             }
         }
