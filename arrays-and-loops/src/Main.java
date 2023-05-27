@@ -7,7 +7,7 @@ import java.util.HashMap;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+        /*Scanner input = new Scanner(System.in);
         int[] scores = {187, 42, 17, 100, 19};
         //Organize arrays from lowest to highest
         Arrays.sort(scores);
@@ -141,14 +141,14 @@ public class Main {
                 break;
             }
         }
-        System.out.println("You escaped the loop!");
+        System.out.println("You escaped the loop!");*/
 
         //Count even, odd, and total numbers in an array with an enhanced for loop
         int [] coolArray = {1, 17, 42, 5, 74, 32, 101};
         //Set initial count of even numbers to 0
         int evenNumbers = 0;
         int oddNumbers = 0;
-        //Loop through numbers in the array with enhance
+        //Loop through each number in the array
         for (int i : coolArray) {
             //Increase count of even number variable if any number
             //In array divided by 2 has no remainder (is an even number)
@@ -164,7 +164,18 @@ public class Main {
         System.out.print("The array, " + Arrays.toString(coolArray));
         System.out.print(", contains " + evenNumbers + " even numbers ");
         System.out.println("and " + oddNumbers + " odd numbers.");
-        //Use to count total in the array
         System.out.println("It contains a total of " + coolArray.length + " numbers.");
+
+        //Count total in the array
+        int [] coolerArray = {1, 17, 42, 5, 74, 32, 101};
+        //Set initial sum to 0
+        int sum = 0;
+        //Loop through each number in the array
+        for (int i : coolerArray) {
+            //Add each number in array to sum
+            sum += i;
+        }
+        System.out.print("The sum of all numbers in " + Arrays.toString(coolerArray));
+        System.out.println(" equals " + sum + ".");
     }
 }
