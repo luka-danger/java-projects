@@ -1,5 +1,8 @@
-import java.util.Scanner;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.Scanner;
+
 
 public class SayHello {
     static String sayHello(String name) {
@@ -10,6 +13,9 @@ public class SayHello {
     }
     static void sortArray(int[] values) {
         Arrays.sort(values);
+    }
+    static void makeOrganizedArray(ArrayList<Integer> values) {
+        Collections.sort(values);
     }
 
     public static void main(String[] args) {
@@ -33,5 +39,18 @@ public class SayHello {
         // Use myArray method to sort array from smallest to largest integer
         sortArray(myArray);
         System.out.println("New: " + Arrays.toString(myArray));
+
+        ArrayList<Integer> milesRan = new ArrayList<>();
+        System.out.println("How many runs did you have this week?: ");
+        int runCount = input.nextInt();
+        int loggedRuns = 0;
+        while(loggedRuns < runCount) {
+            System.out.println("Enter miles completed on run: ");
+            milesRan.add(runCount);
+            loggedRuns += 1;
+        }
+        makeOrganizedArray(milesRan);
+        System.out.println("Your miles this week " + milesRan);
+
     }
 }
