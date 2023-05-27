@@ -7,7 +7,7 @@ import java.util.HashMap;
 
 public class Main {
     public static void main(String[] args) {
-        /*Scanner input = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
         int[] scores = {187, 42, 17, 100, 19};
         //Organize arrays from lowest to highest
         Arrays.sort(scores);
@@ -141,7 +141,7 @@ public class Main {
                 break;
             }
         }
-        System.out.println("You escaped the loop!");*/
+        System.out.println("You escaped the loop!");
 
         //Count even, odd, and total numbers in an array with an enhanced for loop
         int [] coolArray = {1, 17, 42, 5, 74, 32, 101};
