@@ -1,9 +1,5 @@
 public class StartMenu {
-    public static void main(String[] args) {
-        StartMenu startMenu = new StartMenu();
-
-        boolean quit = false;
-        while(!quit) {
+    public void displayMenu() {
             System.out.println("\n=== Run Tracker Main Menu ===");
             System.out.println("1. Add Run");
             System.out.println("2. View Runs");
@@ -12,4 +8,4 @@ public class StartMenu {
             System.out.println("5. Quit");
         }
     }
-}
+
