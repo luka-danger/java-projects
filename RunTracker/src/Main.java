@@ -29,7 +29,20 @@ public class Main {
         }
 
         public static void viewRuns() {
-            System.out.println(runs);
+            System.out.println();
+        }
+
+        public static void searchRuns() {
+            Scanner search = new Scanner(System.in);
+            System.out.println("Enter a keyword to search : ");
+            String keyword = search.nextLine();
+            //Add for loop to iterate over runs
+            /*if(runs.contains(keyword)) {
+                System.out.println("Matching runs: " + run);
+            }
+            else {
+                System.out.println("No matching runs found");
+            }*/
         }
 
         public static void main(String[] args) {
