@@ -1,7 +1,32 @@
 import java.util.*;
 
 public class RunTracker {
-    static void addRun() {
+
+    public static void main(String[] args) {
+        Scanner select = new Scanner(System.in);
+        System.out.print("Welcome to the Run Tracker!");
+        System.out.println(" Please select an option from the Start Menu.");
+        String programOn = "";
+        while (!programOn.toLowerCase().equals("exit")) {
+            startMenu();
+            System.out.print("> ");
+            int choose = select.nextInt();
+            if (choose == 1) {
+                // Call addRun method
+                addRun();
+            }
+        }
+    }
+    public static void startMenu() {
+        System.out.println("\n=== Run Tracker Main Menu ===");
+        System.out.println("1. Add Run");
+        System.out.println("2. View Runs");
+        System.out.println("3. Search Runs");
+        System.out.println("4. Delete Run");
+        System.out.println("5. Quit");
+    }
+
+    public static void addRun() {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter mileage: ");
         double mileage = input.nextDouble();
@@ -15,70 +40,10 @@ public class RunTracker {
         String runNotes = input.nextLine();
 
         System.out.println("Run added!");
-        }
-
-        public static void viewRuns() {
-            System.out.println();
-        }
-
-        public static void searchRuns() {
-            Scanner search = new Scanner(System.in);
-            System.out.println("Enter a keyword to search : ");
-            String keyword = search.nextLine();
-            //Add for loop to iterate over runs
-            /*if(runs.contains(keyword)) {
-                System.out.println("Matching runs: " + run);
-            }
-            else {
-                System.out.println("No matching runs found");
-            }*/
-        }
-
-        public static void deleteRuns() {
-
-        }
-
-        public static void quitProgram() {
-
-        }
-
-        public static void main(String[] args) {
-            ArrayList runTracker = new ArrayList();
-            Scanner select = new Scanner(System.in);
-            System.out.print("Welcome to the Run Tracker!");
-            System.out.println(" Please select an option from the Start Menu.");
-            StartMenu startMenuObject = new StartMenu();
-            startMenuObject.displayMenu();
-            // Improve UI
-            System.out.print("> ");
-            int choose = select.nextInt();
-            // Select 1 for 1. Add Run
-            if (choose == 1) {
-                // Call addRun method
-                addRun();
-            }
-            // View Runs
-            else if (choose == 2) {
-                viewRuns();
-            }
-            // Search Runs
-            else if (choose == 3) {
-                searchRuns();
-            }
-            // Delete Run
-            else if (choose == 4) {
-                deleteRuns();
-            }
-            // Quit
-            else if (choose == 5) {
-                quitProgram();
-            }
-            // Ensure code continues to run if user enters invalid option
-            else {
-                System.out.println("Invalid option, please try again");
-            }
-        }
     }
+
+}
+
 
 
 
