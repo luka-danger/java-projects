@@ -1,3 +1,4 @@
+import java.lang.reflect.Array;
 import java.util.*;
 
 public class RunTracker {
@@ -28,6 +29,7 @@ public class RunTracker {
 
     public static void addRun() {
         Scanner input = new Scanner(System.in);
+        ArrayList storedRuns = new ArrayList();
         System.out.println("Enter mileage: ");
         double mileage = input.nextDouble();
         System.out.println("Enter elevation gain: ");
@@ -39,6 +41,12 @@ public class RunTracker {
         System.out.println("Enter run notes: ");
         String runNotes = input.nextLine();
 
+        storedRuns.add(mileage);
+        storedRuns.add(elevationGain);
+        storedRuns.add(runTime);
+        storedRuns.add(runNotes);
+        //Test case (Delete when done)
+        System.out.println(storedRuns);
         System.out.println("Run added!");
     }
 
