@@ -14,7 +14,9 @@ public class Main {
         double runTime = input.nextDouble();
         System.out.println("Enter run notes: ");
         String runNotes = input.nextLine();
-        return;
+        input.nextLine();
+
+        System.out.println("Run added!");
     }
 
     public static void main(String[] args) {
