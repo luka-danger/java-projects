@@ -1,12 +1,13 @@
 import java.lang.reflect.Array;
-import java.util.Arrays;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
+
+        static void runTracker() {
+            ArrayList runs = new ArrayList<>();
+
+        }
         public static void addRun() {
-            ArrayList runs = new ArrayList();
             Scanner input = new Scanner(System.in);
             System.out.println("Enter mileage: ");
             double mileage = input.nextDouble();
@@ -27,6 +28,10 @@ public class Main {
             System.out.println("Run added!");
         }
 
+        public static void viewRuns() {
+            System.out.println(runs);
+        }
+
         public static void main(String[] args) {
             Scanner select = new Scanner(System.in);
             System.out.print("Welcome to the Run Tracker!");
@@ -43,7 +48,7 @@ public class Main {
             }
             // View Runs
             else if (choose == 2) {
-
+                System.out.println();
             }
             // Search Runs
             else if (choose == 3) {
