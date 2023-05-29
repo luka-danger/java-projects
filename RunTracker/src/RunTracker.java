@@ -1,7 +1,12 @@
 import java.lang.reflect.Array;
 import java.util.*;
+import java.util.Collections;
 
 public class RunTracker {
+
+    public RunTracker(double mileage, int elevationGain, double runTime, String runNotes) {
+
+    }
 
     public static void main(String[] args) {
         Scanner select = new Scanner(System.in);
