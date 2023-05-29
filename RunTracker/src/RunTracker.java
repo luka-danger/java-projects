@@ -35,6 +35,7 @@ public class RunTracker {
         return storedRuns;
     }
     public static void addRun() {
+        ArrayList<RunTracker> runtoAdd = new ArrayList<>();
         Scanner input = new Scanner(System.in);
         System.out.println("Enter mileage: ");
         double mileage = input.nextDouble();
@@ -47,12 +48,10 @@ public class RunTracker {
         System.out.println("Enter run notes: ");
         String runNotes = input.nextLine();
 
-        storedRuns.add(mileage);
-        storedRuns.add(elevationGain);
-        storedRuns.add(runTime);
-        storedRuns.add(runNotes);
+        RunTracker newRun = new RunTracker(mileage, elevationGain, runTime, runNotes);
+        runtoAdd.add(newRun);
         //Test case (Delete when done)
-        System.out.println(storedRuns);
+        System.out.println(newRun);
         System.out.println("Run added!");
     }
 
