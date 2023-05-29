@@ -4,8 +4,8 @@ import java.util.Collections;
 import java.util.Scanner;
 
 public class Main {
-    Scanner input = new Scanner(System.in);
-    public void addRun() {
+    public static void addRun() {
+        Scanner input = new Scanner(System.in);
         System.out.println("Enter mileage: ");
         double mileage = input.nextDouble();
         System.out.println("Enter elevation gain: ");
@@ -14,6 +14,7 @@ public class Main {
         double runTime = input.nextDouble();
         System.out.println("Enter run notes: ");
         String runNotes = input.nextLine();
+        return;
     }
 
     public static void main(String[] args) {
@@ -27,8 +28,7 @@ public class Main {
         int choose = select.nextInt();
         // Add Run
         if(choose == 1) {
-            //Test case only. Add in methods from addRun()
-            System.out.println(choose);
+            addRun();
         }
         // View Runs
         else if(choose == 2) {
