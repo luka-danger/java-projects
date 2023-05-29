@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class Main {
     public static void addRun() {
         Scanner input = new Scanner(System.in);
+        Scanner stringInput = new Scanner(System.in);
         System.out.println("Enter mileage: ");
         double mileage = input.nextDouble();
         System.out.println("Enter elevation gain: ");
@@ -13,8 +14,7 @@ public class Main {
         System.out.println("Enter run duration (in minutes): ");
         double runTime = input.nextDouble();
         System.out.println("Enter run notes: ");
-        String runNotes = input.nextLine();
-        input.nextLine();
+        String runNotes = stringInput.nextLine();
 
         System.out.println("Run added!");
         //Test case (DELETE)
