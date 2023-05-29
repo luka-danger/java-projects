@@ -1,13 +1,13 @@
 import java.lang.reflect.Array;
 import java.util.Arrays;
-import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Collections;
 import java.util.Scanner;
 
 public class Main {
 
+    HashSet runs = new HashSet();
     public static void addRun() {
-        ArrayList runs = new ArrayList();
         Scanner input = new Scanner(System.in);
         System.out.println("Enter mileage: ");
         double mileage = input.nextDouble();
@@ -20,8 +20,7 @@ public class Main {
         System.out.println("Enter run notes: ");
         String runNotes = input.nextLine();
 
-        runs.add(mileage + " miles");
-        runs.add(elevationGain + " feet");
+
         System.out.println(runs);
         System.out.println("Run added!");
     }
