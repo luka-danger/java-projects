@@ -4,6 +4,13 @@ import java.util.Collections;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {}
-    
+    public static void main(String[] args) {
+        System.out.println("Welcome to the Run Tracker!");
+        Scanner input = new Scanner(System.in);
+        String command = "";
+        while(!command.equalsIgnoreCase("quit")) {
+
+        }
+    }
+
 }
