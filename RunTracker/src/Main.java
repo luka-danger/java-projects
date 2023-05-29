@@ -46,6 +46,14 @@ public class Main {
             }*/
         }
 
+        public static void deleteRuns() {
+
+        }
+
+        public static void quitProgram() {
+
+        }
+
         public static void main(String[] args) {
             Scanner select = new Scanner(System.in);
             System.out.print("Welcome to the Run Tracker!");
@@ -62,23 +70,23 @@ public class Main {
             }
             // View Runs
             else if (choose == 2) {
-                System.out.println();
+                viewRuns();
             }
             // Search Runs
             else if (choose == 3) {
-
+                searchRuns();
             }
             // Delete Run
             else if (choose == 4) {
-
+                deleteRuns();
             }
             // Quit
             else if (choose == 5) {
-
+                quitProgram();
             }
-            // Invalid option, please try again
+            // Ensure code continues to run if user enters invalid option
             else {
-
+                System.out.println("Invalid option, please try again");
             }
         }
     }
