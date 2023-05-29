@@ -4,16 +4,27 @@ import java.util.Collections;
 import java.util.Scanner;
 
 public class Main {
+    Scanner input = new Scanner(System.in);
+    public void addRun() {
+        System.out.println("Enter mileage: ");
+        double mileage = input.nextDouble();
+        System.out.println("Enter elevation gain: ");
+        int elevationGain = input.nextInt();
+        System.out.println("Enter run duration (in minutes): ");
+        double runTime = input.nextDouble();
+        System.out.println("Enter run notes: ");
+        String runNotes = input.nextLine();
+    }
 
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+        Scanner select = new Scanner(System.in);
         System.out.print("Welcome to the Run Tracker!");
         System.out.println(" Please select an option from the Start Menu.");
         StartMenu startMenuObject = new StartMenu();
         startMenuObject.displayMenu();
         // Improve UI
         System.out.print("> ");
-        int choose = input.nextInt();
+        int choose = select.nextInt();
         // Add Run
         if(choose == 1) {
             //Test case only. Add in methods from addRun()
