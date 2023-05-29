@@ -17,6 +17,10 @@ public class Main {
         input.nextLine();
 
         System.out.println("Run added!");
+        //Test case
+        System.out.println(runNotes);
+        //Test case
+        System.out.println(elevationGain);
     }
 
     public static void main(String[] args) {
