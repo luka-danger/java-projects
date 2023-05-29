@@ -2,11 +2,11 @@ import java.lang.reflect.Array;
 import java.util.*;
 
 public class Main {
-
-        static void runTracker() {
-            ArrayList runs = new ArrayList<>();
-
+    public class RunTracker {
+        public RunTracker() {
+            ArrayList runs = new ArrayList();
         }
+
         public static void addRun() {
             Scanner input = new Scanner(System.in);
             System.out.println("Enter mileage: ");
@@ -20,12 +20,13 @@ public class Main {
             System.out.println("Enter run notes: ");
             String runNotes = input.nextLine();
 
-            runs.add(mileage + " miles");
+            //Commenting out until I find a solution for ArrayList
+            /*runs.add(mileage + " miles");
             runs.add(elevationGain + " feet");
             runs.add(runTime + " minutes");
             runs.add("Notes: " + runNotes);
             System.out.println(runs);
-            System.out.println("Run added!");
+            System.out.println("Run added!");*/
         }
 
         public static void viewRuns() {
@@ -80,6 +81,7 @@ public class Main {
 
             }
         }
+    }
     }
 
 
