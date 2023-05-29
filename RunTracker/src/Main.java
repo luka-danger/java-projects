@@ -17,9 +17,9 @@ public class Main {
         input.nextLine();
 
         System.out.println("Run added!");
-        //Test case
+        //Test case (DELETE)
         System.out.println(runNotes);
-        //Test case
+        //Test case (Control variable)
         System.out.println(elevationGain);
     }
 
