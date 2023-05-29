@@ -6,21 +6,21 @@ import java.util.Scanner;
 public class Main {
     public static void addRun() {
         Scanner input = new Scanner(System.in);
-        Scanner stringInput = new Scanner(System.in);
         System.out.println("Enter mileage: ");
         double mileage = input.nextDouble();
         System.out.println("Enter elevation gain: ");
         int elevationGain = input.nextInt();
         System.out.println("Enter run duration (in minutes): ");
         double runTime = input.nextDouble();
+        // Ensure the blank space isn't being used in the runNotes variable
+        input.nextLine();
         System.out.println("Enter run notes: ");
-        String runNotes = stringInput.nextLine();
+        String runNotes = input.nextLine();
 
         System.out.println("Run added!");
-        //Test case (DELETE)
+
+        // Test case
         System.out.println(runNotes);
-        //Test case (Control variable)
-        System.out.println(elevationGain);
     }
 
     public static void main(String[] args) {
