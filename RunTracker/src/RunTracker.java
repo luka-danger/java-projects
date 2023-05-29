@@ -1,32 +1,20 @@
-import java.lang.reflect.Array;
 import java.util.*;
 
-public class Main {
-    public class RunTracker {
-        public RunTracker() {
-            ArrayList runs = new ArrayList();
-        }
+public class RunTracker {
+    static void addRun() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter mileage: ");
+        double mileage = input.nextDouble();
+        System.out.println("Enter elevation gain: ");
+        int elevationGain = input.nextInt();
+        System.out.println("Enter run duration (in minutes): ");
+        double runTime = input.nextDouble();
+        // Ensure the blank space isn't being used in the runNotes variable
+        input.nextLine();
+        System.out.println("Enter run notes: ");
+        String runNotes = input.nextLine();
 
-        public static void addRun() {
-            Scanner input = new Scanner(System.in);
-            System.out.println("Enter mileage: ");
-            double mileage = input.nextDouble();
-            System.out.println("Enter elevation gain: ");
-            int elevationGain = input.nextInt();
-            System.out.println("Enter run duration (in minutes): ");
-            double runTime = input.nextDouble();
-            // Ensure the blank space isn't being used in the runNotes variable
-            input.nextLine();
-            System.out.println("Enter run notes: ");
-            String runNotes = input.nextLine();
-
-            //Commenting out until I find a solution for ArrayList
-            /*runs.add(mileage + " miles");
-            runs.add(elevationGain + " feet");
-            runs.add(runTime + " minutes");
-            runs.add("Notes: " + runNotes);
-            System.out.println(runs);
-            System.out.println("Run added!");*/
+        System.out.println("Run added!");
         }
 
         public static void viewRuns() {
@@ -55,6 +43,7 @@ public class Main {
         }
 
         public static void main(String[] args) {
+            ArrayList runTracker = new ArrayList();
             Scanner select = new Scanner(System.in);
             System.out.print("Welcome to the Run Tracker!");
             System.out.println(" Please select an option from the Start Menu.");
@@ -89,7 +78,6 @@ public class Main {
                 System.out.println("Invalid option, please try again");
             }
         }
-    }
     }
 
 
