@@ -16,6 +16,9 @@ public class RunTracker {
                 // Call addRun method
                 addRun();
             }
+            else if(choose == 2){
+
+            }
         }
     }
     public static void startMenu() {
@@ -27,9 +30,12 @@ public class RunTracker {
         System.out.println("5. Quit");
     }
 
+    public static ArrayList <RunTracker> runList() {
+        ArrayList<RunTracker> storedRuns = new ArrayList<>();
+        return storedRuns;
+    }
     public static void addRun() {
         Scanner input = new Scanner(System.in);
-        ArrayList storedRuns = new ArrayList();
         System.out.println("Enter mileage: ");
         double mileage = input.nextDouble();
         System.out.println("Enter elevation gain: ");
@@ -50,6 +56,9 @@ public class RunTracker {
         System.out.println("Run added!");
     }
 
+    public static void searchRun() {
+
+    }
 }
 
 
