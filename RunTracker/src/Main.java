@@ -11,11 +11,13 @@ public class Main {
         System.out.println(" Please select an option from the Start Menu.");
         StartMenu startMenuObject = new StartMenu();
         startMenuObject.displayMenu();
+        // Improve UI
+        System.out.print("> ");
         int choose = input.nextInt();
         // Add Run
         if(choose == 1) {
             //Test case only. Add in methods from addRun()
-            System.out.println("Hi");
+            System.out.println(choose);
         }
         // View Runs
         else if(choose == 2) {
