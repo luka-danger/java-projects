@@ -1,6 +1,4 @@
-import java.lang.reflect.Array;
 import java.util.*;
-import java.util.Collections;
 
 public class RunTracker {
 
@@ -20,12 +18,12 @@ public class RunTracker {
             if (choose == 1) {
                 // Call addRun method
                 addRun();
-            }
-            else if(choose == 2){
-
+            } else if (choose == 2) {
+                searchRun();
             }
         }
     }
+
     public static void startMenu() {
         System.out.println("\n=== Run Tracker Main Menu ===");
         System.out.println("1. Add Run");
@@ -35,10 +33,10 @@ public class RunTracker {
         System.out.println("5. Quit");
     }
 
-    public static ArrayList <RunTracker> runList() {
-        ArrayList<RunTracker> storedRuns = new ArrayList<>();
-        return storedRuns;
+    public static ArrayList<RunTracker> runList() {
+        return new ArrayList<>();
     }
+
     public static void addRun() {
         ArrayList<RunTracker> runtoAdd = new ArrayList<>();
         Scanner input = new Scanner(System.in);
@@ -55,15 +53,17 @@ public class RunTracker {
 
         RunTracker newRun = new RunTracker(mileage, elevationGain, runTime, runNotes);
         runtoAdd.add(newRun);
+        runList();
         //Test case (Delete when done)
         System.out.println(newRun);
         System.out.println("Run added!");
     }
 
     public static void searchRun() {
-
+        System.out.println(runList());
     }
 }
+
 
 
 
