@@ -25,4 +25,14 @@ public class DemoConsumeRestApplication {
 		return builder.build()
 ;	}
 
+	@Bean
+	// CommandLineRunner runs the RestTemplate on startup
+	public CommandLineRunner run(RestTemplate restTemplate) throws Exception {
+		return args -> {
+			Quote quote = restTemplate.getForObject(
+							"http://localhost:8080/api/random", Quote.class);
+			log.info(quote.toString());
+		};
+	}
+
 }
