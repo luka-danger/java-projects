@@ -39,7 +39,6 @@ public class RunTracker {
         }
     }
 
-
     public static void startMenu() {
         System.out.println("\n=== Run Tracker Main Menu ===");
         System.out.println("1. Add Run");
@@ -70,11 +69,7 @@ public class RunTracker {
     }
 
     public static void viewRuns() {
-        if (runs.isEmpty()) {
-            System.out.println("No runs are available.");
-        } else {
-            System.out.println(runs);
-        }
+        System.out.println(runs);
     }
 
         public static void searchRuns() {
