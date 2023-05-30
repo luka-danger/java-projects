@@ -12,6 +12,9 @@ import org.springframework.web.client.RestTemplate;
 @SpringBootApplication
 public class DemoConsumeRestApplication {
 
+	// Logger sends output to the console
+	public static final Logger log = LoggerFactory.getLogger(DemoConsumeRestApplication.class);
+
 	public static void main(String[] args) {
 		SpringApplication.run(DemoConsumeRestApplication.class, args);
 	}
