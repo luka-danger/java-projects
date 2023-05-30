@@ -25,9 +25,9 @@ public class RunTracker {
                 RunTracker runTracker = new RunTracker();
                 runTracker.runTrackerArray();
             } else if (choose == 2) {
-                searchRun();
+                viewRuns();
             } else if (choose == 3) {
-                searchRun();
+                searchRuns();
             } else if (choose == 4) {
 
             } else if (choose == 5) {
@@ -68,21 +68,32 @@ public class RunTracker {
         runs.add("Notes: " + runNotes);
         System.out.println("Run added!");
     }
-    public static void searchRun() {
-        if(runs.isEmpty()) {
-            System.out.println("No runs are available.");
-        }
-        else {
-            Scanner searchBar = new Scanner(System.in);
-            System.out.println("Enter a keyword to search for: ");
-            searchBar.nextLine();
 
-            if(runs.contains(searchBar)) {
-                System.out.println(searchBar + " found!");
-            }
+    public static void viewRuns() {
+        if (runs.isEmpty()) {
+            System.out.println("No runs are available.");
+        } else {
+            System.out.println(runs);
         }
     }
-}
+
+        public static void searchRuns() {
+            if (runs.isEmpty()) {
+                System.out.println("No runs are available.");
+            } else {
+                Scanner searchBar = new Scanner(System.in);
+                System.out.println("Enter a keyword to search for: ");
+                searchBar.nextLine();
+
+                if (runs.contains(searchBar)) {
+                    System.out.println(searchBar + " found!");
+                }
+            }
+
+        }
+    }
+
+
 
 
 
