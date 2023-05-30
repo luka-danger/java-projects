@@ -29,7 +29,7 @@ public class RunTracker {
             } else if (choose == 3) {
                 searchRuns();
             } else if (choose == 4) {
-
+                deleteRun();
             } else if (choose == 5) {
                 System.out.println("See you next time.");
                 break;
@@ -68,7 +68,7 @@ public class RunTracker {
         System.out.println("Run added!");
     }
 
-    public static void viewRuns() {
+        public static void viewRuns() {
         System.out.println(runs);
     }
 
@@ -83,9 +83,17 @@ public class RunTracker {
                 if (runs.contains(searchBar)) {
                     System.out.println(searchBar + " found!");
                 }
+
+            }
+        }
+        public static void deleteRun() {
+            if (runs.isEmpty()) {
+                System.out.println("No runs are available.");
+            } else {
+
             }
 
-        }
+    }
     }
 
 
