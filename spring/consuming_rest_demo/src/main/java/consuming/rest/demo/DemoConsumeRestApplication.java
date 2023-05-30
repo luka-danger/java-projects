@@ -19,4 +19,10 @@ public class DemoConsumeRestApplication {
 		SpringApplication.run(DemoConsumeRestApplication.class, args);
 	}
 
+	@Bean
+	// RestTemplate uses jackson JSON library for data processing
+	public RestTemplate restTemplate(RestTemplateBuilder builder) {
+		return builder.build()
+;	}
+
 }
