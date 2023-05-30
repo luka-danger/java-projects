@@ -1,9 +1,14 @@
 import java.util.*;
 
 public class RunTracker {
+    private static List<String> runs;
 
-    public RunTracker(double mileage, int elevationGain, double runTime, String runNotes) {
+    public RunTracker() {
+        runs = new ArrayList<>();
+    }
 
+    public void runTrackerArray() {
+        addRun();
     }
 
     public static void main(String[] args) {
@@ -17,12 +22,23 @@ public class RunTracker {
             int choose = select.nextInt();
             if (choose == 1) {
                 // Call addRun method
-                addRun();
+                RunTracker runTracker = new RunTracker();
+                runTracker.runTrackerArray();
             } else if (choose == 2) {
                 searchRun();
+            } else if (choose == 3) {
+
+            } else if (choose == 4) {
+
+            } else if (choose == 5) {
+                System.out.println("See you next time.");
+                break;
+            } else {
+                System.out.println("Invalid choice.");
             }
         }
     }
+
 
     public static void startMenu() {
         System.out.println("\n=== Run Tracker Main Menu ===");
@@ -33,12 +49,7 @@ public class RunTracker {
         System.out.println("5. Quit");
     }
 
-    public static ArrayList<RunTracker> runList() {
-        return new ArrayList<>();
-    }
-
     public static void addRun() {
-        ArrayList<RunTracker> runtoAdd = new ArrayList<>();
         Scanner input = new Scanner(System.in);
         System.out.println("Enter mileage: ");
         double mileage = input.nextDouble();
@@ -51,16 +62,14 @@ public class RunTracker {
         System.out.println("Enter run notes: ");
         String runNotes = input.nextLine();
 
-        RunTracker newRun = new RunTracker(mileage, elevationGain, runTime, runNotes);
-        runtoAdd.add(newRun);
-        runList();
-        //Test case (Delete when done)
-        System.out.println(newRun);
+        runs.add(mileage + " miles");
+        runs.add(elevationGain + " feet");
+        runs.add(runTime + " minutes");
+        runs.add("Notes: " + runNotes);
         System.out.println("Run added!");
     }
-
     public static void searchRun() {
-        System.out.println(runList());
+        System.out.println(runs);
     }
 }
 
