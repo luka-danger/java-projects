@@ -15,8 +15,7 @@ public class RunTracker {
         Scanner select = new Scanner(System.in);
         System.out.print("Welcome to the Run Tracker!");
         System.out.println(" Please select an option from the Start Menu.");
-        String programOn = "";
-        while (!programOn.toLowerCase().equals("exit")) {
+        while (true) {
             startMenu();
             System.out.print("> ");
             int choose = select.nextInt();
@@ -58,13 +57,13 @@ public class RunTracker {
         double runTime = input.nextDouble();
         // Ensure the blank space isn't being used in the runNotes variable
         input.nextLine();
-        System.out.println("Enter run notes: ");
-        String runNotes = input.nextLine();
+        //System.out.println("Enter run notes: ");
+        //String runNotes = input.nextLine();
 
         runs.add(mileage + " miles");
         runs.add(elevationGain + " feet");
         runs.add(runTime + " minutes");
-        runs.add("Notes: " + runNotes);
+        //runs.add("Notes: " + runNotes);
         System.out.println("Run added!");
     }
 
@@ -97,8 +96,10 @@ public class RunTracker {
                 System.out.println("Are you sure you want to delete? 1) Yes 2) No: ");
                 int deleteOption = input.nextInt();
                 if(deleteOption == 1) {
-                    runs.remove(runs);
-                    System.out.println("Run deleted.");
+                    for(int runNumber = 0; runNumber <= 2; runNumber++) {
+                        runs.remove(runNumber);
+                        System.out.println("Deleted run");
+                    }
                 }
 
     }
