@@ -27,7 +27,7 @@ public class RunTracker {
             } else if (choose == 2) {
                 searchRun();
             } else if (choose == 3) {
-
+                searchRun();
             } else if (choose == 4) {
 
             } else if (choose == 5) {
@@ -69,7 +69,18 @@ public class RunTracker {
         System.out.println("Run added!");
     }
     public static void searchRun() {
-        System.out.println(runs);
+        if(runs.isEmpty()) {
+            System.out.println("No runs are available.");
+        }
+        else {
+            Scanner searchBar = new Scanner(System.in);
+            System.out.println("Enter a keyword to search for: ");
+            searchBar.nextLine();
+
+            if(runs.contains(searchBar)) {
+                System.out.println(searchBar + " found!");
+            }
+        }
     }
 }
 
