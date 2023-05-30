@@ -57,13 +57,13 @@ public class RunTracker {
         double runTime = input.nextDouble();
         // Ensure the blank space isn't being used in the runNotes variable
         input.nextLine();
-        //System.out.println("Enter run notes: ");
-        //String runNotes = input.nextLine();
+        System.out.println("Enter run notes: ");
+        String runNotes = input.nextLine();
 
         runs.add(mileage + " miles");
         runs.add(elevationGain + " feet");
         runs.add(runTime + " minutes");
-        //runs.add("Notes: " + runNotes);
+        runs.add("Notes: " + runNotes);
         System.out.println("Run added!");
     }
 
@@ -96,9 +96,10 @@ public class RunTracker {
                 System.out.println("Are you sure you want to delete? 1) Yes 2) No: ");
                 int deleteOption = input.nextInt();
                 if(deleteOption == 1) {
-                    for(int runNumber = 0; runNumber <= 2; runNumber++) {
-                        runs.remove(runNumber);
-                        System.out.println("Deleted run");
+                    for(int num = 0; num <= 3; num++) {
+                        String index = runs.get(num);
+                        runs.remove(index);
+                    System.out.println("Deleted run");
                     }
                 }
 
