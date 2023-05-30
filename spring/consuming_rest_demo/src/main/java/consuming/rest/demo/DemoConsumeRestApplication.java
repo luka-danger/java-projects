@@ -9,6 +9,11 @@ import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
+// Run app by using ./mvnw spring-boot:run
+
+/* Can also build JAR file w/ ./mvnw clean package
+ Then run java -jar target/gs-consuming-rest-0.1.0.jar */
+
 @SpringBootApplication
 public class DemoConsumeRestApplication {
 
