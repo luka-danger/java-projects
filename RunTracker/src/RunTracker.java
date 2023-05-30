@@ -75,7 +75,8 @@ public class RunTracker {
         public static void searchRuns() {
             if (runs.isEmpty()) {
                 System.out.println("No runs are available.");
-            } else {
+            }
+            else {
                 Scanner searchBar = new Scanner(System.in);
                 System.out.println("Enter a keyword to search for: ");
                 searchBar.nextLine();
@@ -83,15 +84,22 @@ public class RunTracker {
                 if (runs.contains(searchBar)) {
                     System.out.println(searchBar + " found!");
                 }
-
+                else {
+                    System.out.println("Run not found.");
+                }
             }
         }
         public static void deleteRun() {
             if (runs.isEmpty()) {
                 System.out.println("No runs are available.");
-            } else {
-
             }
+                Scanner input = new Scanner(System.in);
+                System.out.println("Are you sure you want to delete? 1) Yes 2) No: ");
+                int deleteOption = input.nextInt();
+                if(deleteOption == 1) {
+                    runs.remove(runs);
+                    System.out.println("Run deleted.");
+                }
 
     }
     }
