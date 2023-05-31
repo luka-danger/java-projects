@@ -45,7 +45,7 @@ public class RunTracker {
         System.out.println("1. Add Run");
         System.out.println("2. View Runs");
         System.out.println("3. Search Runs");
-        System.out.println("4. Delete Run");
+        System.out.println("4. Delete Item");
         System.out.println("5. Quit");
     }
 
@@ -104,13 +104,23 @@ public class RunTracker {
             if (runs.isEmpty()) {
                 System.out.println("No runs are available.");
             }
-                Scanner input = new Scanner(System.in);
-                System.out.println("Are you sure you want to delete? 1) Yes 2) No: ");
-                int deleteOption = input.nextInt();
-                if(deleteOption == 1) {
-                    System.out.println("Deleted run");
-                    }
-                }
+            for (int i = 0; i < runs.size(); i++) {
+                System.out.println((i + 1) + ". " + runs.get(i));
+            }
+
+            Scanner input = new Scanner(System.in);
+            System.out.print("Enter the run number: ");
+            int runNumber = input.nextInt();
+            input.nextLine(); // Consume newline
+
+            if (runNumber < 1 || runNumber > runs.size()) {
+                System.out.println("Invalid run number.");
+                return;
+            }
+
+            String deletedRun = runs.remove(runNumber - 1);
+            System.out.println("Deleted run: " + deletedRun);
+        }
 
     }
 
