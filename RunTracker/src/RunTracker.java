@@ -16,8 +16,11 @@ public class RunTracker {
     }
 
     public static <ValueError> void main(String[] args) {
+        System.out.println("Welcome to the Run Tracker!");
+        // Initialize ArrayList to add run once program starts
+        RunTracker runTracker = new RunTracker();
+        runTracker.runTrackerArray();
         Scanner select = new Scanner(System.in);
-        System.out.print("Welcome to the Run Tracker!");
         System.out.println(" Please select an option from the Start Menu.");
         while (true) {
             startMenu();
@@ -28,7 +31,7 @@ public class RunTracker {
                 int choice = select.nextInt();
                 if (choice == 1) {
                     // Call addRun() and put items in runs ArrayList
-                    RunTracker runTracker = new RunTracker();
+                    //RunTracker runTracker = new RunTracker();
                     runTracker.runTrackerArray();
                 } else if (choice == 2) {
                     viewRuns();
