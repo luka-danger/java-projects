@@ -13,38 +13,43 @@ public class RunTracker {
         addRun();
     }
 
-    public static void main(String[] args) {
+    public static <ValueError> void main(String[] args) {
         Scanner select = new Scanner(System.in);
         System.out.print("Welcome to the Run Tracker!");
         System.out.println(" Please select an option from the Start Menu.");
         while (true) {
             startMenu();
-            System.out.print("> ");
-            int choose = select.nextInt();
-            if (choose == 1) {
-                // Call addRun method
-                RunTracker runTracker = new RunTracker();
-                runTracker.runTrackerArray();
-            } else if (choose == 2) {
-                viewRuns();
-            } else if (choose == 3) {
-                searchRuns();
-            } else if (choose == 4) {
-                deleteRun();
-            } else if (choose == 5) {
-                System.out.println("See you next time.");
-                break;
-            } else {
-                System.out.println("Invalid choice.");
+            try {
+                System.out.print("> ");
+                int choice = select.nextInt();
+                if (choice == 1) {
+                    RunTracker runTracker = new RunTracker();
+                    runTracker.runTrackerArray();
+                } else if (choice == 2) {
+                    viewRuns();
+                } else if (choice == 3) {
+                    searchRuns();
+                } else if (choice == 4) {
+                    deleteRun();
+                } else if (choice == 5) {
+                    System.out.println("See you next time.");
+                    break;
+                } else {
+                    System.out.println("Invalid choice. Try again.");
+                }
+            } catch (InputMismatchException e) {
+                System.out.println("Invalid input. Please enter a valid integer choice.");
+                select.nextLine(); // Consume invalid input
             }
         }
+
     }
 
     public static void startMenu() {
         System.out.println("\n=== Run Tracker Main Menu ===");
         System.out.println("1. Add Run");
-        System.out.println("2. View Runs");
-        System.out.println("3. Search Runs");
+        System.out.println("2. View Run");
+        System.out.println("3. Search Run");
         System.out.println("4. Delete Item");
         System.out.println("5. Quit");
     }
