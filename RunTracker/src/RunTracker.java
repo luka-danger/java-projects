@@ -1,4 +1,6 @@
+import java.lang.reflect.Array;
 import java.util.*;
+
 
 public class RunTracker {
     private static List<String> runs;
@@ -76,15 +78,25 @@ public class RunTracker {
                 System.out.println("No runs are available.");
             }
             else {
-                Scanner searchBar = new Scanner(System.in);
+                Scanner input = new Scanner(System.in);
                 System.out.println("Enter a keyword to search for: ");
-                searchBar.nextLine();
+                String keyword = input.nextLine();
 
-                if (runs.contains(searchBar)) {
-                    System.out.println(searchBar + " found!");
+                List<String> searchResults = new ArrayList<>();
+
+                for (String run : runs) {
+                    if (run.toLowerCase().contains(keyword.toLowerCase())) {
+                        searchResults.add(run);
+                    }
                 }
-                else {
-                    System.out.println("Run not found.");
+
+                if (searchResults.isEmpty()) {
+                    System.out.println("No runs matching the keyword found.");
+                } else {
+                    System.out.println("Search results:");
+                    for (String result : searchResults) {
+                        System.out.println(result);
+                    }
                 }
             }
         }
@@ -96,15 +108,12 @@ public class RunTracker {
                 System.out.println("Are you sure you want to delete? 1) Yes 2) No: ");
                 int deleteOption = input.nextInt();
                 if(deleteOption == 1) {
-                    for(int num = 0; num <= 3; num++) {
-                        String index = runs.get(num);
-                        runs.remove(index);
                     System.out.println("Deleted run");
                     }
                 }
 
     }
-    }
+
 
 
 
