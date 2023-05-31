@@ -17,7 +17,12 @@ public class RunTracker {
 
     public static <ValueError> void main(String[] args) {
         System.out.println("Welcome to the Run Tracker!");
-        // Initialize ArrayList to add run once program starts
+        /* Initialize runs ArrayList once program starts
+        addRun() is called at the start of the program
+        This allows you to add a run and related info
+        Then you are taken to the start menu where the code runs
+        Until the user chooses to exit
+         */
         RunTracker runTracker = new RunTracker();
         runTracker.runTrackerArray();
         Scanner select = new Scanner(System.in);
