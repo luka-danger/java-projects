@@ -3,13 +3,13 @@ import java.util.Scanner;
 
 public class MagicTrick {
     public static void main(String[] args) {
-        //Create a random number genrator
+        //Create a random number generator
         Random randomNumberGenerator = new Random();
         final int maxValue = 5;
         final int minValue = 1;
         //Pick a random number between 1 and 5
         int guessingNumber = randomNumberGenerator.nextInt(maxValue) + minValue;
-        //Use for calculation in line (fill in later
+        //Use for calculation in line 
         int addingNumber = guessingNumber * 2;
         //Read user input
         Scanner userInput = new Scanner(System.in);
@@ -43,7 +43,7 @@ public class MagicTrick {
         System.out.println("The number that you have now is " + guessingNumber + ".");
 
         //Test Code (Add /* */ when not using)
-        System.out.print("Enter the number guessed between 1 and 10: ");
+        /*System.out.print("Enter the number guessed between 1 and 10: ");
         int numberEntered = userInput.nextInt();
         userInput.nextLine();
 
@@ -60,7 +60,7 @@ public class MagicTrick {
         userInput.nextLine();
 
         currentNumber = currentNumber - numberEntered;
-        System.out.print("Current number - " + numberEntered + " = " + currentNumber);
+        System.out.print("Current number - " + numberEntered + " = " + currentNumber);*/
     }
 }
 
