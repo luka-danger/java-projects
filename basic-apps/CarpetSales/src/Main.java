@@ -18,6 +18,11 @@ public class Main {
             System.out.println("Enter room length: ");
             int roomLength = scnr.nextInt();
             int roomArea = roomWidth * roomLength;
+
+            double laborCost = roomArea * 0.75;
+            double carpetCost = (pricePer * roomArea) * 1.2;
+            double salesTax = (laborCost + carpetCost) * 0.07;
+            double totalCost = laborCost + carpetCost + salesTax;
         }
     }
 }
