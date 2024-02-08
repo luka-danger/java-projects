@@ -6,7 +6,6 @@ public class Main {
 
         System.out.println("How many orders would you like to process?: ");
         int numOrders = scnr.nextInt();
-        System.out.println(numOrders);
 
         double totalSales = 0;
 
@@ -23,6 +22,15 @@ public class Main {
             double carpetCost = (pricePer * roomArea) * 1.2;
             double salesTax = (laborCost + carpetCost) * 0.07;
             double totalCost = laborCost + carpetCost + salesTax;
+
+            System.out.println("Order #" + orderNum);
+            System.out.println("Room: " + roomArea + " sq ft");
+            System.out.printf("Carpet: $%.2f%n", carpetCost);
+            System.out.printf("Labor: $%.2f%n", laborCost);
+            System.out.printf("Tax: $%.2f%n", salesTax);
+            System.out.printf("Cost: $%.2f%n%n", totalCost);
+            totalSales += totalCost;
         }
+        System.out.printf("Total Sales: $%.2f%n", totalSales);
     }
 }
