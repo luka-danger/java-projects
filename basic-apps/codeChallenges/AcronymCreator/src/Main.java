@@ -16,12 +16,9 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        int count = 0;
 
-        while (count < 8) {
-            System.out.println("Enter a phrase to abbreviate: ");
-            System.out.println(createAcronym(scan.nextLine()));
-            count ++;
-        }
+        System.out.println("Enter a phrase to abbreviate: ");
+        System.out.println(createAcronym(scan.nextLine()));
+
     }
 }
