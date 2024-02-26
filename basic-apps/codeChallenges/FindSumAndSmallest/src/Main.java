@@ -13,5 +13,14 @@ public class Main {
             }
             nums.add(num);
         }
+
+        int smallest = nums.getFirst();
+        for(int num : nums) {
+            if (num >= 0 && num < smallest) {
+                smallest = num;
+            }
+        }
+
+        
     }
 }
