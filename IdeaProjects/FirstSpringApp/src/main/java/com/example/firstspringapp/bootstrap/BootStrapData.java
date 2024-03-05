@@ -21,7 +21,26 @@ public class BootStrapData implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-        Author nate = new Author("Nate", "Edge", null);
-        Book mybook = new Book("Pretend Book Title", "12567", null);
+        Author jk = new Author("JK", "Rowling");
+        Book harryPotter = new Book("Harry Potter", "12344");
+
+        jk.getBooks().add(harryPotter);
+        harryPotter.getAuthors().add(jk);
+
+        authorRepo.save(jk);
+        bookRepo.save(harryPotter);
+
+        Author nate = new Author("Nate", "Edge");
+        Book myBook = new Book("Pretend Book", "12545");
+
+        nate.getBooks().add(myBook);
+        myBook.getAuthors().add(nate);
+
+        authorRepo.save(nate);
+        bookRepo.save(myBook);
+
+        System.out.println("Started in BootStrap");
+        System.out.println("Books in repository: " + bookRepo.count());
+
     }
 }
